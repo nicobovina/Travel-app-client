@@ -1,5 +1,5 @@
 import { api_url } from '../url.js';
-const axios = require("axios").default;
+import axios from 'axios';
 
 const GET_COUNTRIES = 'GET_COUNTRIES';
 const GET_COUNTRY_DETAIL = 'GET_COUNTRY_DETAIL';
