@@ -1,6 +1,6 @@
 import React from 'react';
 
-import actDetailStyle from './ActivityDetail.module.css';
+// import actDetailStyle from './ActivityDetail.module.css';
 
 export function ActivityDetail({activity: {name, difficulty, duration, season}}){
 	console.log(name);
