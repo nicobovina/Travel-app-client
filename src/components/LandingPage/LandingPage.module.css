@@ -1,15 +1,19 @@
-.main{
+.main{	
+	height: 99vh;
 	display: flex;
 	flex-flow: column nowrap;
-	/*background-color: red;*/
+	align-items: center;
+	justify-content: space-between;
 }
 
-.mainTitle{
-	font-size: 3rem;
-	font-weight: 300;
-	margin: 2rem 0rem .5rem;
-	color: #e2e2e2;
+.title, .button{
+	margin: 10vh 0;
+	font-weight: 400;
+}
 
+.title{
+	font-size: 6vh;
+	color: #e2e2e2;
   animation: scale 3s infinite;
   transform: scale(1.1);
   animation-direction: alternate;
@@ -24,19 +28,18 @@
   }
 }
 
-
-.join{
-	align-self: center;
-	margin-top: 1rem;
-	padding: .5rem 1rem;
-	/*border: .15rem solid #141a35cc;*/
-	border-radius: .5rem;
+.button{
+	font-size: 3.2vh;
+	text-align: center;
+	padding: 10px 10px;
+	min-width: 230px;
+	border-radius: 5px;
 	background-color: #141a35;
 	text-decoration: none;
 	color: #e2e2e2;
 }
 
-.join:hover{
+.button:hover{
 	color: #141a35;
 	background-color: #e2e2e2;
 	box-shadow: 0 0 1rem 0 #141a35;

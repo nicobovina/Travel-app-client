@@ -1,24 +1,43 @@
 .back{
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: center;
 	align-items: center;
+	justify-content: flex-start;
+	flex-grow: 1;
+	height: 80vh;
+	width: 90vw;
+	margin: 0 auto;
+	/*border: 2px solid red;*/
 }
 
 .header{
-	display: flex;
-	height: auto;
 	width: 100%;
-	padding: 1rem 0rem;
-	flex-flow: row nowrap;
-	justify-content: center;
+	display: flex;
+	flex-flow: column nowrap;
 	align-items: center;
+	box-sizing: border-box;
+	flex: 0 1 auto;
 }
 
 .title{
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	font-weight: 400;
-	margin-right: 1rem;
+	margin: 1rem 0.5rem;
+	text-align: center;
 	color: #e2e2e2;
 }
 
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.back{
+		justify-content: center;
+	}
+  .header{
+  	flex-flow: row nowrap;
+  	justify-content: space-around;
+  	padding: 0;
+  	margin-top: 0;
+  } 
+}

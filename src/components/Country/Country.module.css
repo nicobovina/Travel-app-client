@@ -1,14 +1,13 @@
 .conteiner{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
-    width: 12rem;
-    margin: .5rem;
+    flex: 0 1 auto;
+    margin: .2rem;
     border-radius: .4rem;
     background-color: #141a3588;
-    color: e2e2e2;
-    flex: 0 1 auto;
+    color: #e2e2e2;
+
     backdrop-filter: blur(5px);
     filter: contrast(90%);
     animation: blur .5s ease-in-out;
@@ -17,6 +16,12 @@
 
 .conteiner:hover{
     filter: contrast(130%);
+}
+
+.flag{
+    height: 3rem;
+    margin: .5rem .5rem .1rem;
+    padding: .5rem 3rem;
 }
 
 .information{
@@ -34,12 +39,6 @@
 
 .secondary{
     font-size: .9rem;
-}
-
-.flag{
-    height: 4rem;
-    margin: .5rem .5rem .1rem;
-    padding: .5rem 3rem;
 }
 
 .link{
@@ -60,3 +59,18 @@
         filter: blur(0px);
     }
 }
+
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .conteiner{
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+

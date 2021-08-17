@@ -30,7 +30,7 @@ export function Countries({ countries }){
 	        	totalCountries={countries.length} 
 	       	 	paginate={paginate} 
 	     	 />
-	     	 </div>
+     	 	</div>
      	 </div>
 
 		);

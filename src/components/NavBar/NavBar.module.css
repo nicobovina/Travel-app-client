@@ -1,4 +1,6 @@
 .nav{
+	/*border: 2px solid yellow;*/
+	position: relative;
 	background-color: #141a35;
 	height: auto;
 	display: flex;

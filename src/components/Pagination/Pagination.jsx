@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
-import paginationStyle from './Pagination.modules.css'
+
+const Conteiner = styled.div`
+	width: max-content;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+	overflow: auto;
+`;
+
 
 const Button = styled.a`
   background-color: #141a35;
@@ -20,16 +28,34 @@ const Button = styled.a`
   }
 `;
 
-// import paginationStyle from './Pagination.modules.css';
-
 export function Pagination ({ countriesPerPage, totalCountries, paginate }){
 	const pageNumbers = [];
 
 	for (let i = 1; i <= Math.ceil(totalCountries / countriesPerPage); i++){
 		pageNumbers.push(i);
 	}
+
 	return (
-			<div >
+			<Conteiner >
+			{pageNumbers.map( number => 
+						<Button 
+							key={number} 
+							onClick={() => paginate(number)} 
+							href="#"
+						>
+							{number}
+						</Button >
+			)}
+			</Conteiner>
+		);
+}
+
+export default Pagination;
+
+
+/*
+
+<div className={paginationStyle.conteiner}>
 			{pageNumbers.map( number => {
 				return (
 						<Button key={number} onClick={() => paginate(number)} href="#" className={paginationStyle.pages}>
@@ -39,6 +65,5 @@ export function Pagination ({ countriesPerPage, totalCountries, paginate }){
 			})}
 			</div>
 		);
-}
 
-export default Pagination;
+*/

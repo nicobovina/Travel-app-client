@@ -12,7 +12,7 @@ export function NavBar() {
                 <div className={navBarStyle.links}>
                     <NavLink exact to="/home" className={navBarStyle.link}>Home</NavLink>
                     <NavLink exact to="/activities" className={navBarStyle.link}>Actividades</NavLink>
-                    <NavLink to="/" className={navBarStyle.link}>Acerca de</NavLink>
+                    {/*<NavLink to="/" className={navBarStyle.link}>Acerca de</NavLink>*/}
                 </div>
 
             </nav>

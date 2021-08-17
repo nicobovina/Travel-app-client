@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { getCountries, getActivities } from '../../actions/index';
-import searchBarStyle from './SearchBar.module.css';
+import searchbar from './SearchBar.module.css';
 
 
 export function SearchBar(props) {
@@ -32,8 +32,9 @@ export function SearchBar(props) {
   }
 
 	return (
-		<form className={searchBarStyle.form} onSubmit={(e) => handleSubmit(e)}>
+		<form className={searchbar.form} onSubmit={(e) => handleSubmit(e)}>
 			<input
+			className={searchbar.input}
 				type="text"
 				name="name"
 				id="inputCountry"
@@ -42,7 +43,7 @@ export function SearchBar(props) {
 				placeholder="Ingresa pais de busqueda"
 				onChange={(e) => handleChange(e)}
 			/>
-			<select name="continent" id="continent" value={inputContinent} onChange={(e) => handleChange(e)}>
+			<select className={searchbar.input} name="continent" id="continent" value={inputContinent} onChange={(e) => handleChange(e)}>
 				<option value=''>Elegir continente</option>
 				<option value='africa'>Africa</option>
 				<option value='americas'>America</option>
@@ -51,13 +52,13 @@ export function SearchBar(props) {
 				<option value='oceania'>Oceania</option>
 				<option value='polar'>Polo</option>
 			</select>
-			<select name="activity" value={inputActivity} onChange={(e) => handleChange(e)}>
+			<select className={searchbar.input} name="activity" value={inputActivity} onChange={(e) => handleChange(e)}>
 				<option value="">Elegir actividad</option>
 				{ props.activities.length &&
 					props.activities.map( a => <option value={a.name}>{a.name}</option>)
 				}
 			</select>
-			<select name="order" value={inputOrder} onChange={(e) => handleChange(e)}>
+			<select className={searchbar.input} name="order" value={inputOrder} onChange={(e) => handleChange(e)}>
 				<option value=''>Ordenar por...</option>
 				<optgroup label="Nombre">
 				<option value='nameAsc'>de A a Z</option>
@@ -68,7 +69,7 @@ export function SearchBar(props) {
 				<option value='popDes'>de mayor a menor</option>
 				</optgroup>
 			</select>
-      <button type="submit" onClick={(e) => handleSubmit(e)}>
+      <button className={searchbar.input} type="submit" onClick={(e) => handleSubmit(e)}>
         Mostrar todos los paises
       </button>
 		</form>

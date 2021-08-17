@@ -1,5 +1,4 @@
 import React from 'react';
-// import './App.css';
 
 import { Route } from "react-router";
 
@@ -9,10 +8,11 @@ import CountryDetail from './components/CountryDetails/CountryDetail';
 import Activities from './components/Activities/Activities';
 import NavBar from './components/NavBar/NavBar'
 
+import app from './app.module.css';
 
 export function App() {
   return (
-    <div className="App">
+    <div className={app.main}>
       <Route exact path='/' component={LandingPage} />
       <Route path='/home' component={NavBar} />
       <Route path='/activities' component={NavBar} />

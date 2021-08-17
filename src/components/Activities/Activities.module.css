@@ -37,7 +37,7 @@
 }
 
 
-input, select{
+/*input, select{
 	background-color: #eaedff;
 	margin-right: .5rem;
 	border-radius: 5px;
@@ -61,7 +61,7 @@ button{
 
 button:hover{
 	box-shadow: 0 0 5px 0 #e2e2e2;
-}
+}*/
 
 .submitButton{
 	border-radius: .5rem;
